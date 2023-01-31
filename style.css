@@ -1,0 +1,676 @@
+/*
+Theme Name: HiLive
+Text Domain: hilive
+Version: 1.0
+Description: Theme developed for HiLive By Citriom.
+Author: Citriom
+Author URI: https://citriom.com
+Theme URI: https://citriom.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+    0. General
+    1. Typography
+    2. General Layout
+    3. Specific Layout & Styles
+    4. Wordpress Block Adjustments
+    5. Utility
+    6. Responsive
+
+----------------------------------------------------------------------------- */
+
+/*
+    Styles for HiLive Landing Page
+*/
+/* 
+    0. General
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@400;700&family=Rubik:wght@700&display=swap');
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 400;
+    color: #404040;
+    background-image: url(assets/images/fondo-top.svg);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position-x: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 
+    1. Typography
+*/
+
+h1,
+.displayAsH1 {
+    font-family: 'Rubik', 'Franklin Gothic', 'Tahoma', sans-serif;
+    font-size: 3.7rem;
+    margin-bottom: .5rem;
+    line-height: 4rem;
+}
+
+h2,
+h3,
+h4 {
+    font-weight: 400;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: 'Rubik', 'Franklin Gothic', 'Tahoma', sans-serif;
+    font-size: 2.85rem;
+    margin-bottom: .5rem;
+    line-height: 3rem;
+}
+
+h3 {
+    color: #007082;
+    font-weight: 700;
+    font-size: 2.25em;
+    margin-bottom: .5rem;
+    line-height: 3rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.5em;
+    color: #404040;
+}
+
+li {
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Text size modifiers */
+.headTxt--huge {
+    font-size: 5.65rem;
+    line-height: 6rem;
+    margin-bottom: .8rem;
+}
+
+.headTxt--fancy {
+    font-family: 'Rubik', 'Franklin Gothic', 'Tahoma', sans-serif;
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    line-height: 4rem;
+}
+
+.bodyTxt--small {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    margin-bottom: .5em;
+}
+
+
+.bodyTxt--big {
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    margin-bottom: .5em;
+}
+
+.bodyTxt--extraBig {
+    font-size: 1.875rem;
+    line-height: 1.5em;
+    margin-bottom: .5em;
+}
+
+.bodyTxt--huge {
+    font-size: 2.25rem;
+    line-height: 1.5em;
+    margin-bottom: .5em;
+}
+
+.lightSection {
+    color: white;
+}
+
+
+/* 
+    2. General Layout
+*/
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+.content {
+    /* outline: 5px solid red; */
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: center;
+}
+
+.rowSpacer {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    justify-content: center;
+    align-self: center;
+}
+
+.col {
+    flex: 1;
+}
+
+.infoBlock {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoBlock--fullWidth {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoBlock--wide {
+    max-width: 1500px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fullWidthBlock {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.row--vAlignCenter {
+    align-items: center;
+}
+
+.text-green {
+    color: #007082;
+}
+
+
+/* 
+    3. Specific Layout & Styles
+*/
+.mainHeader {
+    padding: 20px 50px;
+}
+
+.mainHeader .logo {
+    flex-grow: 0;
+}
+
+.btn {
+    text-align: center;
+    width: fit-content;
+    font-weight: 700;
+    border-radius: 3px;
+    background-color: #66DCCD;
+    padding: 10px 14px;
+    display: inline-block;
+    text-decoration: none;
+    color: #404040;
+}
+
+.btn:hover {
+    background: #007082;
+    color: white;
+}
+
+.btn:visited {
+    color: #404040;
+}
+
+.superDot {
+    background-color: #FFB71B;
+    border-radius: 3px;
+    height: .7ex;
+    /* Un poco más de la mitad del alto de la letra */
+    width: .7ex;
+    /* Un poco más de la mitad del alto de la letra */
+    display: inline-block;
+}
+
+.fondo-slider {
+    background: url(../images/background-slider.svg) no-repeat;
+    background-position-x: -360px;
+    background-position-y: center;
+}
+
+.mainFooter {
+    flex-shrink: 0;
+    background-color: #404040;
+    padding: 40px 50px;
+}
+
+/* Menu */
+.mainNav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.mainMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.mainMenu .menu-item {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.mainMenu .menu-item a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 3px;
+}
+
+.mainMenu .menu-item a:hover {
+    background: #FFB71B;
+}
+
+.mainMenu .current-menu-item a {
+    border-left: 1px solid #FFB71B;
+    border-right: 1px solid #FFB71B;
+}
+
+.mainMenu .menu-item a:active {
+    background: #FFA620;
+}
+
+/*
+    4. Wordpress Block Adjustments
+*/
+.wp-block-cover-image.is-light .wp-block-cover__inner-container,
+.wp-block-cover.is-light .wp-block-cover__inner-container {
+    color: #404040;
+}
+
+.wp-block-button__link {
+    border-radius: 3px;
+    padding: calc(0.667em + 0px) calc(1.333em + 2px);
+    background-color: #66DCCD;
+    color: #404040;
+    font-weight: 700;
+}
+
+.wp-block-button__link:hover {
+    background: #007082;
+    color: white;
+}
+
+.wp-block-button__link:active {
+    background: #404040;
+    color: white;
+}
+
+.wpButton--secondary .wp-block-button__link {
+    border-radius: 3px;
+    padding: calc(0.667em + 0px) calc(1.333em + 2px);
+    background-color: #FFB71B;
+    color: #404040;
+    font-weight: 700;
+}
+
+.wpButton--secondary .wp-block-button__link:hover {
+    background: #E7A821;
+    color: white;
+}
+
+.wpButton--secondary .wp-block-button__link:active {
+    background: #404040;
+    color: white;
+}
+
+
+.wp-block-column {
+    flex-grow: 1;
+    min-width: 0;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+
+body {
+    font-family: 'Roboto', 'Franklin Gothic', 'Tahoma', sans-serif;
+}
+
+.wp-block-table {
+    border-collapse: collapse;
+    margin: 30px 0px 30px 0px;
+}
+
+.wp-block-table thead tr th {
+    background-color: #F1F1F1;
+    color: #404040;
+    padding: 10px 1px 10px 1px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    border: 0px solid #f1f1f1;
+}
+
+.wp-block-table tbody tr td {
+    border: 0px solid #f1f1f1;
+    font-size: 1rem;
+    padding: 20px 30px 20px 10px;
+    background-color: #ffffff;
+}
+
+.wp-block-table tfoot tr td {
+    background-color: #f6f6f6;
+    color: #404040;
+    padding: 5px 1px 5px 1px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: center;
+    border: 0px solid #f1f1f1;
+}
+
+.is-style-stripes tr:nth-child(even) td {
+    background-color: #f6f6f6;
+}
+
+.wp-block-table.tableA.is-style-stripes td,
+.wp-block-table.tableA.is-style-stripes th {
+    border-right: 1px solid #D8D8D8;
+    border-left: 1px solid #D8D8D8;
+    border-top: 1px solid #D8D8D8;
+}
+
+.wp-block-table.tableA.is-style-stripes th {
+    border-bottom: 1px solid #D8D8D8;
+    border-right: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+}
+
+.wp-block-table.tableA.is-style-stripes tr th:first-child {
+    border-left: 1px solid #F1F1F1;
+}
+
+.wp-block-table.tableA.is-style-stripes tr th:last-child {
+    border-right: 1px solid #F1F1F1;
+}
+
+.wp-block-table.tableA.is-style-stripes tfoot td {
+    border-right: 1px solid #FFFFFF;
+    border-left: 1px solid #F1F1F1;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.wp-block-table.tableA.is-style-stripes tfoot td:last-child {
+    border-right: 1px solid #F1F1F1;
+}
+
+.wp-block-table tbody .wp-block-table tbody tr td {
+    border-top: 2px solid #f1f1f1;
+}
+
+body {
+    font-family: 'Roboto', 'Franklin Gothic', 'Tahoma', sans-serif;
+}
+
+.tableA {
+    border-collapse: collapse;
+    margin: 30px 0px 30px 0px;
+}
+
+.tableA thead tr th {
+    background-color: #F1F1F1;
+    color: #404040;
+    padding: 10px 1px 10px 1px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #D8D8D8;
+    border-right: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+}
+
+.tableA thead tr th:first-child {
+    border-left: 1px solid #F1F1F1;
+}
+
+.tableA thead tr th:last-child {
+    border-right: 1px solid #F1F1F1;
+}
+
+.tableA thead tr th:last-child {
+    border-right: 1px solid #F1F1F1;
+}
+
+.tableA thead tr:last-child {
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.tableA tbody tr td {
+    border-right: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+    border-left: 1px solid #D8D8D8;
+    border-top: 1px solid #D8D8D8;
+    font-size: 1rem;
+    padding: 20px 30px 20px 10px;
+    background-color: #ffffff;
+}
+
+.tableA tbody .tableA tbody tr td {
+    border-top: 2px solid #F1F1F1;
+}
+
+.tableA tbody tr:last-of-type td {
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.tableA tfoot tr td {
+    background-color: #F1F1F1;
+    color: #404040;
+    padding: 5px 1px 5px 1px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: center;
+    border-bottom: 1px solid #D8D8D8;
+    border-right: 1px solid #FFFFFF;
+}
+
+.tableA tfoot tr td:first-child {
+    border-left: 1px solid #F1F1F1;
+}
+
+.tableA tfoot tr:last-child {
+    border-right: 1px solid #F1F1F1;
+}
+
+.tableA tfoot tr td:last-child {
+    border-right: 1px solid #FFFFFF;
+}
+
+.tableA tfoot tr:last-child {
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.tableA tfoot tr td:last-child {
+    border-right: 1px solid #F1F1F1;
+}
+
+.tableB {
+    border-collapse: collapse;
+    margin: 30px 0px 30px 0px;
+}
+
+.tableB thead tr {
+    padding: 20px 10px 20px 10px;
+    font-size: 1rem;
+}
+
+.tableB thead tr th {
+    background-color: #219A93;
+    color: #ffffff;
+    padding: 10px 0px 10px 0px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.tableB tbody tr td {
+    padding: 20px 10px 20px 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: #ffffff;
+}
+
+.tableB tfoot tr td {
+    background-color: #219A93;
+    color: #ffffff;
+    padding: 5px 1px 5px 1px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.tableB tr:last-child {
+    border-bottom: 1px solid #D8D8D8;
+}
+
+
+
+/* 5. Utility  */
+
+.imgResponsive {
+    width: 100%;
+    height: auto;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.img-blendMultiply,
+.img-blendMultiply img {
+    mix-blend-mode: multiply;
+}
+
+.mb-1 {
+    margin-bottom: 1em;
+}
+
+.mb-2 {
+    margin-bottom: 2em;
+}
+
+.mb-3 {
+    margin-bottom: 3em;
+}
+
+/* 
+    6. Responsive
+*/
+@media only screen and (max-width: 1070px) {
+    .container {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .headTxt--huge {
+        font-size: 4rem;
+        line-height: 5rem;
+        margin-bottom: .6rem;
+    }
+
+    h1,
+    .displayAsH1 {
+        font-family: 'Rubik', 'Franklin Gothic', 'Tahoma', sans-serif;
+        font-size: 3.2rem;
+        margin-bottom: .5rem;
+        line-height: 3.5rem;
+    }
+
+    .mainHeader {
+        padding: 80px;
+        align-items: center;
+    }
+
+    .headerHuge {
+        font-size: 8vw;
+    }
+
+    .row--stackSM {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .col--order1-SM {
+        order: 1;
+    }
+
+    .col--order2-SM {
+        order: 2;
+    }
+
+    .mt-0-sm {
+        margin-top: 0;
+    }
+
+    .infoBlock {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .rowSpacer {
+        padding-top: 3em;
+        padding-bottom: 3em;
+        padding-left: 5em;
+        padding-right: 5em;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .rowSpacer img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .rowSpacer {
+        padding-top: 1em;
+        padding-bottom: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+
+}
