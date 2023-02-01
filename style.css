@@ -52,6 +52,102 @@ body {
 }
 
 
+
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4.8%;
+    place-content: center;
+    padding: 20px 100px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    width: 16vw;
+    height: 16vw;
+    rotate: 30deg;
+    gap: 1%;
+    background-color: #FFFFFF;
+    border: 3px solid #ffffff;
+}
+
+
+/* Digits */
+.numberFour>* {
+    aspect-ratio: 1/1;
+    background-color: #f1f1f1;
+    animation: fliping calc(var(--nth-child) * .5s) .01s both;
+}
+
+.numberFour :nth-child(7) { --nth-child: 1}
+.numberFour :nth-child(12) {--nth-child: 2}
+.numberFour :nth-child(13) {--nth-child: 3}
+.numberFour :nth-child(14) {--nth-child: 4}
+.numberFour :nth-child(9) { --nth-child: 5}
+.numberFour :nth-child(19) {--nth-child: 6 }
+
+.numberCero>* {
+    aspect-ratio: 1/1;
+    background-color: #f1f1f1;
+    animation: fliping calc(var(--nth-child) * 0.5s) .2s both;
+}
+
+/* El numero dentro del parentesis del selector ".number...:nth-child(x)" selecciona el elemento hijo al que se le van a aplicar los cambios,
+mientras el numero de la variable --nth-child: determina en que orden se va a animar el elemento con respecto a sus hermanos*/
+.numberCero :nth-child(7) {--nth-child: 1}
+.numberCero :nth-child(8) {--nth-child: 2}
+.numberCero :nth-child(9) { --nth-child: 3}
+.numberCero :nth-child(14) {--nth-child: 4}
+.numberCero :nth-child(19) {--nth-child: 5}
+.numberCero :nth-child(18) {--nth-child: 6}
+.numberCero :nth-child(17) {--nth-child: 7}
+.numberCero :nth-child(12) {--nth-child: 8}
+
+.numberFourDelayed>* {
+    aspect-ratio: 1/1;
+    background-color: #f1f1f1;
+    animation: fliping calc(var(--nth-child) * .5s) .4s both;
+}
+
+.numberFourDelayed :nth-child(7) { --nth-child: 1 }
+.numberFourDelayed :nth-child(12) { --nth-child: 2 }
+.numberFourDelayed :nth-child(13) { --nth-child: 3 }
+.numberFourDelayed :nth-child(14) { --nth-child: 4 }
+.numberFourDelayed :nth-child(9) { --nth-child: 5 }
+.numberFourDelayed :nth-child(19) { --nth-child: 6 }
+
+/* keyframes */
+@keyframes fliping {
+
+    0%,
+    5% {
+        transform: rotateY(0turn);
+        background-color: #f1f1f1;
+    }
+
+    45%,
+    100% {
+        transform: rotateY(0.5turn);
+        background-color: #FFB71B;
+    }
+}
+
+/* animations */
+.flip {
+    animation: fliping 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation-delay: 0.5s;
+}
+
+
+
+
+
+
+
+
 /* 
     1. Typography
 */
