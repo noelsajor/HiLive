@@ -51,8 +51,8 @@
                 </div>
                 <a href="<?php echo get_home_url(); ?>" class="btn">BACK TO HOME</a>
             </div>
-            <div class="container">
-                <div class="wrapper numberFour">
+            <div class="digitBox">
+                <div class="digit numberFour">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -79,7 +79,7 @@
                     <div></div>
                     <div></div>
                 </div>
-                <div class="wrapper numberCero">
+                <div class="digit numberCero">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -106,7 +106,7 @@
                     <div></div>
                     <div></div>
                 </div>
-                <div class="wrapper numberFourDelayed">
+                <div class="digit numberFourDelayed">
                     <div></div>
                     <div></div>
                     <div></div>
