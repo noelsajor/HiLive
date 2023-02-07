@@ -335,16 +335,17 @@ li {
     margin: 30px 0px 30px 30px;
 }
 
+.wp-block-navigation__container li a {
+    width: 100%;
+    padding:0px 20px;
+}
+
 .wp-block-navigation__container li {
     width: 100%;
     line-height: 3em;
     padding: 10px 0px 10px 0px;
     margin: 0;
-}
-
-.wp-block-navigation__container li a {
-    width: 100%;
-    padding:0px 20px;
+    position: relative;
 }
 
 .wp-block-navigation__container li::before {
@@ -352,6 +353,8 @@ li {
     background: #D8D8D8;
     width: 10px;
     height: 10px;
+    position: absolute;
+    left: -0.5em;
 
 }
 
