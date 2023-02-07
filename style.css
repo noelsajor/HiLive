@@ -51,9 +51,6 @@ body {
     flex-direction: column;
 }
 
-
-
-
 .digitBox {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -241,6 +238,144 @@ li {
 /* 
     2. General Layout
 */
+
+/* First Menu style */
+/* .wp-block-navigation {
+    background-color: #F6F6F6;
+    border: 1px solid #ffffff ;
+    border-right: 5px solid #00BBB4;
+    padding: 2.5em 1.5em;
+}
+
+.wp-block-navigation__container {
+    width: 100%;
+    height: 100%;
+}
+
+.wp-block-navigation__container li {
+    width: 100%;
+    line-height: 3em;
+    margin-bottom: 1px;
+}
+
+.wp-block-navigation__container li a {
+    padding: 0px 15px;
+}
+
+.wp-block-navigation__container>li:hover {
+    background-color: #D8D8D8;
+    font-weight: 800;
+    width: 100%;
+    height: 100%;
+} */
+/* me falta encontrar la forma de solucionar como el hover se active con el ancho completo del contenedor y no solo al pasar sobre el texto */
+
+
+/* Second Menu style */
+/* .wp-block-navigation {
+    outline: 1px solid #D8D8D8;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-left: 10px solid #FFB71B;
+    box-sizing: border-box;
+    
+}
+
+.wp-block-navigation__container {
+    width: 100%;
+    height: 100%;
+}
+
+.wp-block-navigation__container li {
+    line-height: 3em;
+    margin: 0;
+}
+
+.wp-block-navigation__container li:first-of-type {
+    width: 100%;
+    border-top-right-radius: 10px;
+}
+
+.wp-block-navigation__container li:last-of-type {
+    width: 100%;
+    border-bottom-right-radius: 10px;
+}
+
+.wp-block-navigation__container li a {
+    padding: 5px 60px 5px 30px;
+}
+
+.wp-block-navigation__container>li:hover {
+    border: 1px solid #FFB71B;
+    border-left: 0;
+    background-color: rgba(255, 183, 27, 0.2);
+    width: 100%;
+    height: 100%;
+} */
+/* me falta agregar el color blanco de fondo si que sobresalga en el border radius del primer y ultimo hijo de la table, y evitar que el outline quede por fuera del border-left amarillo  */
+
+
+
+
+
+/* Third Menu style */
+.wp-block-navigation {
+    background-color: #F6F6F6;   
+}
+
+.wp-block-navigation ul li a::marker {
+    color: #D8D8D8;
+    font-size: 2em;
+}
+
+.wp-block-navigation__responsive-container-content ul {
+    width: 100%;
+    margin: 30px 0px 30px 30px;
+}
+
+.wp-block-navigation__container li {
+    width: 100%;
+    line-height: 3em;
+    padding: 10px 0px 10px 0px;
+    margin: 0;
+}
+
+.wp-block-navigation__container li a {
+    width: 100%;
+    padding:0px 20px;
+}
+
+.wp-block-navigation__container li::before {
+    content: "";
+    background: #D8D8D8;
+    width: 10px;
+    height: 10px;
+
+}
+
+.wp-block-navigation__container li:hover::before {
+    content: "";
+    background: #219A93;
+    width: 13px;
+    height: 13px;
+}
+
+.wp-block-navigation__container>li:hover {
+    font-weight: 800;
+}
+/* me falta agregar el hover a los bullets para que cambien a verde #219A93 */
+
+
+
+
+
+
+
+
+
+
 .row {
     display: flex;
     gap: 30px;
