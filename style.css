@@ -240,7 +240,7 @@ li {
 */
 
 /* First Menu style */
-/* .wp-block-navigation {
+.wp-block-navigation {
     background-color: #F6F6F6;
     border: 1px solid #ffffff ;
     border-right: 5px solid #00BBB4;
@@ -267,7 +267,7 @@ li {
     font-weight: 800;
     width: 100%;
     height: 100%;
-} */
+}
 /* me falta encontrar la forma de solucionar como el hover se active con el ancho completo del contenedor y no solo al pasar sobre el texto */
 
 
@@ -321,7 +321,7 @@ li {
 
 
 /* Third Menu style */
-.wp-block-navigation {
+/* .wp-block-navigation {
     background-color: #F6F6F6;   
 }
 
@@ -367,7 +367,7 @@ li {
 
 .wp-block-navigation__container>li:hover {
     font-weight: 800;
-}
+} */
 /* me falta agregar el hover a los bullets para que cambien a verde #219A93 */
 
 
