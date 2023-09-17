@@ -40,7 +40,7 @@
                 <a href="mailto:info@hi.live" class="btn">BOOK A DEMO</a>
             </nav>
     </header>
-    <main class="content">
+    <main class="content404">
         <div class="infoBlock--wide rowSpacer">
             <div class="">
                 <h1>Page Not Found</h1>

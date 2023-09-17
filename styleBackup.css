@@ -23,7 +23,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     6. Responsive
 
 ----------------------------------------------------------------------------- */
+/* 
+    Please Include last 5 changes. Dates + General description of what changed. 
+	
+	08 Feb 2023 | Jose | estilos para ajuste del sub-menu de la style-guide. ver 2. General Layout 
+	08 Feb 2022 | Gabriela | mas estilos para los utility margins y paddings. ver parte 5. utility. 
+	01 Feb 2022 | Jose | Agregué las clases .digitBox, .digit y  los Digits (.numberCero, .numberFour, .numberFourDelayed) en el General Layout. Tambien la seccion keyframes y Animations en la seccion Utility
+	10 Jan 2022 | Jose | Agregué las lineas 139-145 del General Layout para agregar la clase "content" que mantiene el footer pegado al borde inferior, y tambien las lineas 49-52 que afectan la altura de del html y el body
+	9 Jan 2022 | Jose | Agregué las lineas 133-139 del General Layout para agregar la clase "rowSpacer" con sus mediaQueries y el atributo flex-shrink: 0 a la clase mainFooter
 
+*/
 /*
     Styles for HiLive Landing Page
 */
@@ -43,13 +52,179 @@ body {
     font-weight: 400;
     color: #404040;
     background-image: url(assets/images/fondo-top.svg);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-size: 150%;
     background-position-x: center;
-    margin: 0;
-    display: flex;
+    margin:0;
+	display: flex;
     flex-direction: column;
 }
+/* 
+    1. Typography
+*/
+h1, .displayAsH1 {
+    font-family: 'Rubik', 'Franklin Gothic', 'Tahoma', sans-serif;
+    font-size: 3.7rem;
+    margin-bottom: .5rem;
+    line-height: 4rem;
+}
+h2, h3, h4 {
+    font-weight: 400;
+    margin-top: 0;
+}
+h2 {
+    font-family: 'Rubik', 'Franklin Gothic', 'Tahoma', sans-serif;
+    font-size: 2.85rem;
+    margin-bottom: .5rem;
+    line-height: 3rem;
+}
+h3 {
+    color: #007082;
+    font-weight: 700;
+    font-size: 2.25em;
+    margin-bottom: .5rem;
+    line-height: 3rem;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.5em;
+    color: #404040;
+}
+li {
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+/* Text size modifiers */
+.headTxt--huge { 
+    font-size: 5.65rem;
+    line-height: 6rem;
+    margin-bottom: .8rem;
+}
+.headTxt--fancy {
+    font-family: 'Rubik', 'Franklin Gothic', 'Tahoma', sans-serif;
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    line-height: 4rem;
+}
+.bodyTxt--big {
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    margin-bottom: .5em;
+}
+.bodyTxt--extraBig {
+    font-size: 1.875rem;
+    line-height: 1.5em;
+    margin-bottom: .5em;
+}
+.bodyTxt--huge {
+    font-size: 2.25rem;
+    line-height: 1.5em;
+    margin-bottom: .5em;
+}
+
+/* 
+    2. General Layout
+*/
+
+.wp-block-navigation {
+    background-color: #F6F6F6;
+    border: 1px solid #ffffff ;
+    border-right: 5px solid #00BBB4;
+    padding: 1.5em 1.5em;
+}
+
+.wp-block-navigation__container {
+    width: 100%;
+    height: 100%;
+    gap: 0;
+}
+
+.wp-block-navigation__container li {
+    width: 100%;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+.wp-block-navigation__container li a {
+    padding: 15px 15px;
+    width: 100%;
+}
+
+.wp-block-navigation__container>li:hover {
+    background-color: #D8D8D8;
+    font-weight: 800;
+    width: 100%;
+    height: 100%;
+}
+
+.current-menu-item {
+    font-weight: 800;
+}
+
+.row {
+    display:flex;
+    gap: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.rowSpacer {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    justify-content: center;
+    align-self: center;
+}
+
+.col {
+    flex: 1;
+}
+
+.infoBlock {
+    max-width:1024px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.infoBlock--svg {
+    max-width:1024px;
+	width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.infoBlock--fullWidth {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoBlock--wide {
+    max-width: 1500px;
+	padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.fullWidthBlock {
+    margin-left:30px;
+    margin-right:30px;
+}
+.row--vAlignCenter {
+    align-items: center;
+}
+.text-green { color:#007082;}
 
 .digitBox {
     display: grid;
@@ -70,7 +245,6 @@ body {
     background-color: #FFFFFF;
     border: 3px solid #ffffff;
 }
-
 
 /* Digits */
 .numberFour>* {
@@ -116,359 +290,15 @@ mientras el numero de la variable --nth-child: determina en que orden se va a an
 .numberFourDelayed :nth-child(9) { --nth-child: 5 }
 .numberFourDelayed :nth-child(19) { --nth-child: 6 }
 
-/* keyframes */
-@keyframes fliping {
-
-    0%,
-    5% {
-        transform: rotateY(0turn);
-        background-color: #f1f1f1;
-    }
-
-    45%,
-    100% {
-        transform: rotateY(0.5turn);
-        background-color: #FFB71B;
-    }
-}
-
-/* animations */
-.flip {
-    animation: fliping 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    animation-delay: 0.5s;
-}
-
-
-
-
-
-
-
-
-/* 
-    1. Typography
-*/
-
-h1,
-.displayAsH1 {
-    font-family: 'Rubik', 'Franklin Gothic', 'Tahoma', sans-serif;
-    font-size: 3.7rem;
-    margin-bottom: .5rem;
-    line-height: 4rem;
-    margin-top: 0;
-}
-
-h2,
-h3,
-h4 {
-    font-weight: 400;
-    margin-top: 0;
-}
-
-h2 {
-    font-family: 'Rubik', 'Franklin Gothic', 'Tahoma', sans-serif;
-    font-size: 2.85rem;
-    margin-bottom: .5rem;
-    line-height: 3rem;
-}
-
-h3 {
-    color: #007082;
-    font-weight: 700;
-    font-size: 2.25em;
-    margin-bottom: .5rem;
-    line-height: 3rem;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 15px;
-    line-height: 1.5em;
-    color: #404040;
-}
-
-li {
-    line-height: 1.5em;
-    margin-bottom: 10px;
-}
-
-/* Text size modifiers */
-.headTxt--huge {
-    font-size: 5.65rem;
-    line-height: 6rem;
-    margin-bottom: .8rem;
-}
-
-.headTxt--fancy {
-    font-family: 'Rubik', 'Franklin Gothic', 'Tahoma', sans-serif;
-    font-size: 3rem;
-    margin-bottom: .5rem;
-    line-height: 4rem;
-}
-
-.bodyTxt--small {
-    font-size: 0.8rem;
-    line-height: 1.5em;
-    margin-bottom: .5em;
-}
-
-
-.bodyTxt--big {
-    font-size: 1.4rem;
-    line-height: 1.5em;
-    margin-bottom: .5em;
-}
-
-.bodyTxt--extraBig {
-    font-size: 1.875rem;
-    line-height: 1.5em;
-    margin-bottom: .5em;
-}
-
-.bodyTxt--huge {
-    font-size: 2.25rem;
-    line-height: 1.5em;
-    margin-bottom: .5em;
-}
-
-.lightSection {
-    color: white;
-}
-
-
-/* 
-    2. General Layout
-*/
-
-/* First Menu style */
-.wp-block-navigation {
-    background-color: #F6F6F6;
-    border: 1px solid #ffffff ;
-    border-right: 5px solid #00BBB4;
-    padding: 1.5em 1.5em;
-}
-
-.wp-block-navigation__container {
-    width: 100%;
-    height: 100%;
-    gap: 0;
-}
-
-.wp-block-navigation__container li {
-    width: 100%;
-    line-height: 1.2em;
-    margin: 0;
-}
-
-.wp-block-navigation__container li a {
-    padding: 15px 15px;
-    width: 100%;
-}
-
-.wp-block-navigation__container>li:hover {
-    background-color: #D8D8D8;
-    font-weight: 800;
-    width: 100%;
-    height: 100%;
-}
-
-.wp-block-navigation__container li a:active {
-    background-color: #404040;
-    color:#ffffff;
-}
-
-.current-menu-item {
-    font-weight: 800;
-}
-/* me falta encontrar la forma de solucionar como el hover se active con el ancho completo del contenedor y no solo al pasar sobre el texto */
-
-
-/* Second Menu style */
-/* .wp-block-navigation {
-    outline: 1px solid #D8D8D8;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    border-left: 10px solid #FFB71B;
-    box-sizing: border-box;
-    
-}
-
-.wp-block-navigation__container {
-    width: 100%;
-    height: 100%;
-}
-
-.wp-block-navigation__container li {
-    line-height: 3em;
-    margin: 0;
-}
-
-.wp-block-navigation__container li:first-of-type {
-    width: 100%;
-    border-top-right-radius: 10px;
-}
-
-.wp-block-navigation__container li:last-of-type {
-    width: 100%;
-    border-bottom-right-radius: 10px;
-}
-
-.wp-block-navigation__container li a {
-    padding: 5px 60px 5px 30px;
-}
-
-.wp-block-navigation__container>li:hover {
-    border: 1px solid #FFB71B;
-    border-left: 0;
-    background-color: rgba(255, 183, 27, 0.2);
-    width: 100%;
-    height: 100%;
-} */
-/* me falta agregar el color blanco de fondo si que sobresalga en el border radius del primer y ultimo hijo de la table, y evitar que el outline quede por fuera del border-left amarillo  */
-
-
-
-
-
-/* Third Menu style */
-/* .wp-block-navigation {
-    background-color: #F6F6F6;   
-}
-
-.wp-block-navigation ul li a::marker {
-    color: #D8D8D8;
-    font-size: 2em;
-}
-
-.wp-block-navigation__responsive-container-content ul {
-    width: 100%;
-    margin: 30px 0px 30px 30px;
-}
-
-.wp-block-navigation__container li a {
-    width: 100%;
-    padding:0px 20px;
-}
-
-.wp-block-navigation__container li {
-    width: 100%;
-    line-height: 3em;
-    padding: 10px 0px 10px 0px;
-    margin: 0;
-    position: relative;
-}
-
-.wp-block-navigation__container li::before {
-    content: "";
-    background: #D8D8D8;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    left: -0.5em;
-
-}
-
-.wp-block-navigation__container li:hover::before {
-    content: "";
-    background: #219A93;
-    width: 13px;
-    height: 13px;
-}
-
-.wp-block-navigation__container>li:hover {
-    font-weight: 800;
-} */
-/* me falta agregar el hover a los bullets para que cambien a verde #219A93 */
-
-
-
-
-
-
-
-
-
-
-.row {
-    display: flex;
-    gap: 30px;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-    /* justify-content: center; */
-}
-
-.content404 {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-    justify-content: center;
-}
-
-.rowSpacer {
-    display: flex;
-    gap: 20px;
-    padding: 20px 0;
-    justify-content: center;
-    align-self: center;
-}
-
-.col {
-    flex: 1;
-}
-
-.infoBlock {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.infoBlock--fullWidth {
-    width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.infoBlock--wide {
-    max-width: 1500px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.fullWidthBlock {
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.row--vAlignCenter {
-    align-items: center;
-}
-
-.text-green {
-    color: #007082;
-}
-
-
 /* 
     3. Specific Layout & Styles
 */
 .mainHeader {
     padding: 20px 50px;
 }
-
 .mainHeader .logo {
     flex-grow: 0;
 }
-
 .btn {
     text-align: center;
     width: fit-content;
@@ -480,38 +310,30 @@ li {
     text-decoration: none;
     color: #404040;
 }
-
 .btn:hover {
     background: #007082;
     color: white;
 }
-
 .btn:visited {
     color: #404040;
 }
-
 .superDot {
     background-color: #FFB71B;
     border-radius: 3px;
-    height: .7ex;
-    /* Un poco más de la mitad del alto de la letra */
-    width: .7ex;
-    /* Un poco más de la mitad del alto de la letra */
+    height: .7ex; /* Un poco más de la mitad del alto de la letra */
+    width: .7ex; /* Un poco más de la mitad del alto de la letra */
     display: inline-block;
 }
-
 .fondo-slider {
     background: url(../images/background-slider.svg) no-repeat;
     background-position-x: -360px;
     background-position-y: center;
 }
-
 .mainFooter {
-    flex-shrink: 0;
+	flex-shrink: 0;
     background-color: #404040;
-    padding: 40px 50px;
+    padding: 20px 20px 40px 20px;
 }
-
 /* Menu */
 .mainNav {
     display: flex;
@@ -519,19 +341,16 @@ li {
     align-items: center;
     gap: 20px;
 }
-
 .mainMenu {
     list-style: none;
     margin: 0;
     padding: 0;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
 .mainMenu .menu-item {
     display: inline-block;
     margin-left: 5px;
 }
-
 .mainMenu .menu-item a {
     display: inline-block;
     padding: 10px 20px;
@@ -539,16 +358,13 @@ li {
     color: black;
     border-radius: 3px;
 }
-
 .mainMenu .menu-item a:hover {
     background: #FFB71B;
 }
-
 .mainMenu .current-menu-item a {
     border-left: 1px solid #FFB71B;
     border-right: 1px solid #FFB71B;
 }
-
 .mainMenu .menu-item a:active {
     background: #FFA620;
 }
@@ -556,11 +372,10 @@ li {
 /*
     4. Wordpress Block Adjustments
 */
-.wp-block-cover-image.is-light .wp-block-cover__inner-container,
+.wp-block-cover-image.is-light .wp-block-cover__inner-container, 
 .wp-block-cover.is-light .wp-block-cover__inner-container {
     color: #404040;
 }
-
 .wp-block-button__link {
     border-radius: 3px;
     padding: calc(0.667em + 0px) calc(1.333em + 2px);
@@ -568,17 +383,14 @@ li {
     color: #404040;
     font-weight: 700;
 }
-
 .wp-block-button__link:hover {
     background: #007082;
     color: white;
 }
-
 .wp-block-button__link:active {
-    background: #404040;
+    background:  #404040;
     color: white;
 }
-
 .wpButton--secondary .wp-block-button__link {
     border-radius: 3px;
     padding: calc(0.667em + 0px) calc(1.333em + 2px);
@@ -597,12 +409,12 @@ li {
     color: white;
 }
 
-
 .wp-block-column {
     flex-grow: 1;
     min-width: 0;
     word-break: normal;
-    overflow-wrap: normal;
+    overflow-wrap: normal;	
+	/* JL */
 }
 
 
@@ -807,51 +619,78 @@ body {
 }
 
 
-
-/* 5. Utility  */
-
+/*
+    5. Utility
+*/
 .imgResponsive {
     width: 100%;
     height: auto;
 }
-
 .alignRight {
     text-align: right;
 }
-
 .alignCenter {
     text-align: center;
 }
-
 .img-blendMultiply,
-.img-blendMultiply img {
+.img-blendMultiply img 
+ {
     mix-blend-mode: multiply;
 }
+.mb-1 { margin-bottom: 1rem;}
+.mb-2 { margin-bottom: 2rem;}
+.mb-3 { margin-bottom: 3rem;}
+.mt-1 { margin-top: 1rem;}
+.mt-2 { margin-top: 2rem;}
+.mt-3 { margin-top: 3rem;}
+.pt-1 { padding-top: 1rem;}
+.pt-2 { padding-top: 2rem;}
+.pt-3 { padding-top: 3rem;}
+.pb-1 { padding-bottom: 1rem;}
+.pb-2 { padding-bottom: 2rem;}
+.pb-3 { padding-bottom: 3rem;}
 
-.mb-1 {
-    margin-bottom: 1em;
+/* keyframes */
+@keyframes fliping {
+
+    0%,
+    5% {
+        transform: rotateY(0turn);
+        background-color: #f1f1f1;
+    }
+
+    45%,
+    100% {
+        transform: rotateY(0.5turn);
+        background-color: #FFB71B;
+    }
 }
 
-.mb-2 {
-    margin-bottom: 2em;
-}
-
-.mb-3 {
-    margin-bottom: 3em;
+/* animations */
+.flip {
+    animation: fliping 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation-delay: 0.5s;
 }
 
 /* 
     6. Responsive
 */
-@media only screen and (max-width: 1070px) {
+/* @media only screen and (max-width: 1200px) {
     .container {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+} */
+
+@media only screen and (max-width: 1070px) {	
+		.container {
         margin-left: 30px;
         margin-right: 30px;
     }
 
     .headTxt--huge {
-        font-size: 4rem;
-        line-height: 5rem;
+        font-size: 4.1rem;
+        line-height: 4.5rem;
         margin-bottom: .6rem;
     }
 
@@ -861,37 +700,6 @@ body {
         font-size: 3.2rem;
         margin-bottom: .5rem;
         line-height: 3.5rem;
-    }
-
-    .mainHeader {
-        padding: 80px;
-        align-items: center;
-    }
-
-    .headerHuge {
-        font-size: 8vw;
-    }
-
-    .row--stackSM {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .col--order1-SM {
-        order: 1;
-    }
-
-    .col--order2-SM {
-        order: 2;
-    }
-
-    .mt-0-sm {
-        margin-top: 0;
-    }
-
-    .infoBlock {
-        margin-left: 15px;
-        margin-right: 15px;
     }
 
     .rowSpacer {
@@ -908,12 +716,13 @@ body {
         width: 100%;
     }
 }
+	
 
 @media only screen and (max-width: 700px) {
     .container {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+        margin-left: 0px;
+        margin-right: 0px;
+	
 
     .rowSpacer {
         padding-top: 1em;
@@ -924,5 +733,4 @@ body {
         flex-direction: column-reverse;
         gap: 5px;
     }
-
 }
